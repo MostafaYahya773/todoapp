@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+html {
+  user-select: none;
+}
+/* tasktitle > title */
+.addtasktitle::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: #ff6767;
+  bottom: -3px;
+}
+
+.react-calendar {
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+textarea {
+  resize: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.taskDisplay::-webkit-scrollbar {
+  display: block;
+  width: 7px;
+}
+.taskDisplay::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ff6767;
+}
+
+/* .active {
+  background-color: #ff6767;
+} */
