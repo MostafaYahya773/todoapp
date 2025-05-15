@@ -48,9 +48,6 @@ export default function LastAdded() {
             newData?.map((task) => (
               <div
                 key={task?.id}
-                onClick={() => {
-                  setTaskDetailsActive(true), setTaskId(task?.id);
-                }}
                 className="task grid grid-cols-[auto] gap-y-1 md:grid-cols-[auto_1fr]  items-center gap-x-3 p-2 cursor-pointer shadow-md border border-[#e7e7e7] w-full rounded-xl h-fit"
               >
                 <div className="status__import flex gap-x-1 items-center md:order-1 order-2">
@@ -97,7 +94,12 @@ export default function LastAdded() {
                   </div>
                 </div>
                 <div className="title__del flex justify-between flex-wrap items-center  md:order-2 order-1 ">
-                  <div className="titles">
+                  <div
+                    onClick={() => {
+                      setTaskDetailsActive(true), setTaskId(task?.id);
+                    }}
+                    className="titles"
+                  >
                     <h1 className="title font-semibold text-[10px] md:text-[14px] ">
                       {task.content?.length > 32
                         ? `${task.content.slice(0, 32)}...`
