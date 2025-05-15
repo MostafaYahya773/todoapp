@@ -60,7 +60,7 @@ export default function AllTaskLayout() {
         </div>
       </div>
       <div className="relative border border-[#00000053] h-fit rounded-xl">
-        <div className="mx-[20px] my-2">
+        <div className="mx-[5px] md:mx-[20px] my-2">
           <AllTasks />
         </div>
       </div>

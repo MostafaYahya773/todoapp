@@ -94,7 +94,7 @@ export default function ToDoTask() {
           >
             <div className="status flex justify-between items-center flex-wrap gap-y-3">
               <p
-                className={`status text-[14px] ${
+                className={`import text-[14px] ${
                   task?.duration?.amount === 2 &&
                   'text-inProgressColor bg-[#a5b7ee] px-3 py-1 rounded-lg'
                 }`}
@@ -132,7 +132,7 @@ export default function ToDoTask() {
             </div>
             <div className="importance flex justify-between flex-wrap pb-3 border-b border-blackColor">
               <div className="startDate flex items-center gap-x-2">
-                <i class="fa-solid fa-flag text-textColor"></i>
+                <i className="fa-solid fa-flag text-textColor"></i>
                 <p className="font-medium">{task?.labels[0]}</p>
               </div>
               <div className="state">
@@ -172,7 +172,7 @@ export default function ToDoTask() {
                 <p>{task?.comment_count}</p>
               </Link>
               <div className="end_task flex justify-center items-center gap-x-2">
-                <i class="fa-solid fa-hourglass-end text-textColor"></i>
+                <i className="fa-solid fa-hourglass-end text-textColor"></i>
                 <p className="font-medium">{task?.due?.date}</p>
               </div>
             </div>

@@ -67,7 +67,7 @@ export default function ToDoTask() {
           </div>
         </div>
       </div>
-      {!checkLength === 0 ? (
+      {checkLength > 0 ? (
         newData?.map((task) => (
           <div
             key={task.id}
@@ -114,7 +114,7 @@ export default function ToDoTask() {
               <div className="end_task flex justify-center items-center flex-wrap gap-x-2 ">
                 <i className="fa-solid fa-circle-check text-textColor mt-1"></i>
                 <p className="font-medium ">
-                  <span className="font-medium">compaleted at</span>{' '}
+                  <span className="font-medium">compaleted at</span>
                   {task?.completed_at.slice(0, -18)}
                 </p>
               </div>
